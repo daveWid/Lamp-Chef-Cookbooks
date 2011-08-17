@@ -8,4 +8,8 @@
 #
 
 require_recipe "php"
-package "libapache2-mod-php5"
+
+# Debian systems need the php5 module added in...
+if platform?("debian", "ubuntu")
+	package "libapache2-mod-php5"
+end

@@ -15,7 +15,7 @@ recipe           "lamp::xdebug", "Installs the xdebug Zend module"
   supports os
 end
 
-%w{ apache2, git, mysql, php } each do |depend|
+%w{ apache2, git, mysql, php }.each do |depend|
 	depends depend
 end
 
@@ -47,19 +47,19 @@ attribute "lamp/xdebug/path",
 attribute "lamp/install/mcrypt",
   :display_name => "Install mcrypt?",
   :description => "Installation flag for mcrypt",
-  :default => true
+  :default => "true"
 
 attribute "lamp/install/phpmyadmin",
   :display_name => "Install phpmyadmin?",
   :description => "Installation flag for phpmyadmin",
-  :default => true
+  :default => "true"
 
 attribute "lamp/install/webgrind",
   :display_name => "Install webgrind?",
   :description => "Installation flag for webgrind",
-  :default => true
+  :default => "true"
 
 attribute "lamp/install/xdebug",
   :display_name => "Install xdebug?",
   :description => "Installation flag for xdebug",
-  :default => true
+  :default => "true"

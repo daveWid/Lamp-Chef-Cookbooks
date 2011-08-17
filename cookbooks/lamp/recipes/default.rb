@@ -7,13 +7,17 @@
 # Licensed under the MIT license
 #
 
+# Package manager updates for debian systems
+if platform?("debian", "ubuntu")
+	require_recipe "apt"
+	require_recipe "vim"
+end
+
 # Add in some recipes
-require_recipe "apt"
 require_recipe "apache2"
 require_recipe "mysql::server"
 require_recipe "lamp::php"
 require_recipe "git"
-require_recipe "vim"
 
 if node[:lamp][:install][:xdebug]
 	require_recipe "lamp::xdebug"
